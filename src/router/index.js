@@ -5,6 +5,7 @@ import Om from '../views/About.vue'
 import Galleri from '../views/Galleri.vue'
 import Kontakt from '../views/Kontakt.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +31,7 @@ const routes = [
   },
 ]
 
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -37,3 +39,4 @@ const router = new VueRouter({
 })
 
 export default router
+

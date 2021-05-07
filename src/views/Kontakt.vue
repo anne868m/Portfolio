@@ -2,92 +2,83 @@
 <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img class="img"
-           src="../assets/Anne.jpg"
-        ></v-img>
+      
   
       </v-col>
      
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Velkommen til min portfolio
+         I har også mulighed for at kontakte mig, via disse medier.
         </h1>
 
-        <p class="subheading font-weight-regular">
-          Her kan i lære mig at kende, og se de forskellelige projekter jeg har lavet, gennem de seneste år.
-          Dette er både gennem skole og fritid.
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
+        <p class="subheading font-weight-regular text-center" id="text">
+            Telefonen virker ind tilvidere kun via telefon, og ikke på nogle browsere.
+            <v-spacer>
+            </v-spacer>
+            Da den går directe til opkalds funktionen, på telfonen, og du dermed har en hurtigere adgang til af få fat I mig.
         </p>
+
+       
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
     </v-row>
+  <div class="text-center">
+  
+        <v-btn
+        style="margin:5px;"
+      class="mx-2"
+      fab
+      dark
+      color="#a7d5bd"
+      href = "mailto: anneluiseand@gmail.com"
+    >
+      <v-icon dark>
+        mdi-email
+      </v-icon>
+    </v-btn>
+
+    <v-btn
+    style="margin:5px;"
+      class="mx-2"
+      fab
+      dark
+     color="#a7d5bd"
+      href="tel:+4560841579"
+    >
+      <v-icon dark>
+        mdi-cellphone
+      </v-icon>
+    </v-btn>
+
+     <v-btn
+     style="margin:5px;"
+      class="mx-2"
+      fab
+      dark
+    color="#a7d5bd"
+       href="https://www.linkedin.com/in/anne-andersen-952a06152/"
+    >
+      <v-icon dark>
+        mdi-linkedin
+      </v-icon>
+    </v-btn>
+
+      <v-btn
+      style="margin:5px;"
+      class="mx-2"
+      fab
+      dark
+     color="#a7d5bd"
+      href="https://www.instagram.com/anneandersen.xo/"
+    >
+      <v-icon dark>
+        mdi-instagram
+      </v-icon>
+    </v-btn>
+
+  </div>
+
   </v-container>
 </template>
 
@@ -100,11 +91,8 @@ export default {
 }
 </script>
 
+
+
 <style>
-.img {
-  width: 300px;
-  height: 300px;
- justify-content: flex-end;
-  
-}
+
 </style>

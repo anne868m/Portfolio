@@ -21,6 +21,5 @@ export default {
  .log {
   width: 100px;
   height: 100px;
- justify-content: center;
  }
 </style>

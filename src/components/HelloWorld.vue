@@ -15,49 +15,26 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
+        <h1 class="display-3">
           Velkommen til min portfolio
         </h1>
 
-        <p class="subheading font-weight-regular">
+        <p class="subheading font-weight-regular text-center" id="text">
           Her kan i lære mig at kende, og se de forskellelige projekter jeg har lavet, gennem de seneste år.
           Dette er både gennem skole og fritid.
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
+          <v-spacer></v-spacer>
+         Lær mig bedere at kende, ved at trykke på endten Om, Galleri eller Kontakt, du kan altid vende tilbage hertil via Home knappen.
+         <v-spacer></v-spacer>
+         I kan også få en lille forsmag her.
         </p>
       </v-col>
+      
 
       <v-col
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
+       
 
         <v-row justify="center">
           <a
@@ -76,9 +53,7 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
+       
 
         <v-row justify="center">
           <a
@@ -93,64 +68,74 @@
         </v-row>
       </v-col>
     </v-row>
+
+     <v-row>
+     <v-col
+      v-for="n in items"
+      :key="n"
+      class="d-flex child-flex"
+      cols="4"
+     
+    >
+
+      <v-img
+        contain
+        max-height="250"
+        max-width="250"
+        :src="n.ImgUrl"
+        aspect-ratio="1"
+        class="Gallery"
+      >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+    </v-col>
+     </v-row>
   </v-container>
 </template>
 
 <script>
-  export default {
-    name: 'HelloWorld',
 
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
+export default ({
+    
+    
+        data() {
+            return {
+                items: [
+                    {
+                        ImgUrl: require("@/assets/Album.jpg")
+                         
+                    }, 
+                     {
+                        ImgUrl: require("@/assets/Lineart.jpg")
+                         
+                    }, 
+                     {
+                        ImgUrl: require("@/assets/ariel.jpg")
+                         
+                    }, 
+
+                ]
+            }
+        }
+
+})
+
 </script>
+
+<style >
+
+#text {
+font-style: italic;
+}
+</style>

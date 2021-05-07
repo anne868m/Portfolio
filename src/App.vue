@@ -1,9 +1,11 @@
 <template>
-<div id="nav">
+
+
+<div id="nav" :height="height">
  
     <v-app-bar
       absolute
-      color="#6A76AB"
+       color="#d1eaf1"
       dark
       shrink-on-scroll
       prominent
@@ -11,20 +13,18 @@
       fade-img-on-scroll
       scroll-target="#scrolling-techniques-4"
     >
-  
-      <template v-slot:img="{ props }">
-        <v-img
+        <template v-slot:img="{ props }">
+        <v-img 
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>
+     
 
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title  align='center'>      
+      <v-toolbar-title >      
       <v-img src="./assets/LogoAnne.png"
-      contain
-      align='right'        
+      contain        
       max-height="100"
         max-width="100">
       </v-img>
@@ -105,6 +105,8 @@
 </div>  
 
 
+
+
 </template>
 
 
@@ -119,20 +121,51 @@
       ],
     }),
   }
-
+ 
+    
 </script>
 
+<script>
+  export default {
+    computed: {
+      height () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 220
+          case 'sm': return 400
+          case 'md': return 500
+          case 'lg': return 600
+          case 'xl': return 800
+        }
+      },
+    },
+  }
+</script>
+<script>
+ export default {
+    data: () => ({
+      selection: [],
+      items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    }),
+  }
+    
+  
+</script>
+
+
 <style>
+
 .v-main {
   margin-top:224px;
 }
     nav li:hover,
    nav li:active{
-      background-color: rgb(202, 110, 255);
+      
       cursor: pointer;
     }
 #nav {
   background: lavender;
+  text-align: center
 } 
+
 
 </style>
